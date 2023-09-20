@@ -1,6 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 function SingleProdact() {
+  const navigate = useNavigate();
+  const handleSingleItem = () => {
+    const user = false;
+    user ? navigate("/dashboard/profile") : navigate("/");
+  };
   const prodactIs = useLoaderData();
 
   const { id, title, description, price, thumbnail, images, stock } =
@@ -75,7 +80,9 @@ function SingleProdact() {
               ${price}
             </span>
 
-            <button className="btn bg-sky-300">Add To Card</button>
+            <button onClick={handleSingleItem} className="btn bg-sky-300">
+              Add To Card
+            </button>
           </div>
         </div>
       </div>

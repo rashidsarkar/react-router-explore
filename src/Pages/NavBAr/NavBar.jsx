@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -28,48 +28,66 @@ function NavBar() {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <Link to="/about" className="link link-hover">
+                  <NavLink
+                    to="/about"
+                    className="link link-hover"
+                    activeClassName="link-active"
+                  >
                     About us
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/contact" className="link link-hover">
+                  <NavLink
+                    to="/contact"
+                    className="link link-hover"
+                    activeClassName="link-active"
+                  >
                     Contact
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/jobs" className="link link-hover">
+                  <NavLink
+                    to="/jobs"
+                    className="link link-hover"
+                    activeClassName="link-active"
+                  >
                     Jobs
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/press-kit" className="link link-hover">
+                  <NavLink
+                    to="/press-kit"
+                    className="link link-hover"
+                    activeClassName="link-active"
+                  >
                     Press kit
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
-            <Link to="/" className="text-xl normal-case btn btn-ghost">
+            <NavLink to="/" className="text-xl normal-case btn btn-ghost">
               daisyUI
-            </Link>
+            </NavLink>
           </div>
           <div className="hidden navbar-center lg:flex">
             <ul className="px-1 menu menu-horizontal">
               <li>
-                <Link to="/products" className="link link-hover">
+                <NavLink
+                  to="/products"
+                  className="link link-hover"
+                  activeClassName="link-active"
+                >
                   Products
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/dashboard" className="link link-hover">
+                <NavLink
+                  to="/dashboard"
+                  className="link link-hover"
+                  activeClassName="link-active"
+                >
                   Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link className="link link-hover">Jobs</Link>
-              </li>
-              <li>
-                <Link className="link link-hover">Press kit</Link>
+                </NavLink>
               </li>
             </ul>
           </div>
